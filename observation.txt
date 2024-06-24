@@ -1,0 +1,29 @@
+
+Observations:
+
+1.Variations in Loss and Testing Accuracy over Epochs:
+	The training accuracy increases steadily with each epoch, reaching a high of 99.62% by the end of training.
+	The training loss decreases consistently as well, indicating that the model is learning from the training data.
+	The validation accuracy and loss also show improvement over epochs, with the validation accuracy reaching 100% by the end of training.
+	The testing accuracy is slightly lower than the validation accuracy, indicating some generalization error.
+2.Overfitting Issues:
+	There is a significant gap between the training accuracy and the testing accuracy, suggesting some degree of overfitting.
+	Overfitting occurs when the model learns to memorize the training data rather than generalize well to unseen data.
+	This overfitting issue is evident from the fact that the training accuracy approaches 100%, while the testing accuracy is lower, indicating that the model may not generalize well to 	new data.
+3.Handling Overfitting with Dropout:
+	Dropout is a regularization technique commonly used to prevent overfitting in neural networks.
+	The model already includes a dropout layer with a dropout rate of 0.2 after the first dense layer.
+	Adding another dropout layer with a higher dropout rate (e.g., 0.3) after the convolutional layers may help further reduce overfitting.
+	Increasing the dropout rate introduces more randomness during training, which can help prevent the model from relying too heavily on specific features and memorizing the training 	data.
+4.Share Structure and Invariance Property:
+	Share structure property refers to the idea that certain features or patterns in the input data can be shared across different parts of the data.
+	In the context of image classification, convolutional neural networks (CNNs) leverage share structure property by using convolutional layers to detect local patterns or features that 	are common across different regions of the image.
+	Invariance property refers to the ability of the model to recognize patterns or features regardless of their position or orientation within the input data.
+	CNNs handle invariance property through operations like max pooling, which helps the model focus on the most salient features while ignoring minor variations in position or orientation.
+
+Overall, while the current CNN model achieves high training and validation accuracy, there is evidence of overfitting, which may impact its performance on unseen data. Adding another dropout layer after the convolutional layers and further tuning regularization parameters could potentially improve the model's ability to generalize to new data and mitigate overfitting issues.
+
+
+
+
+
